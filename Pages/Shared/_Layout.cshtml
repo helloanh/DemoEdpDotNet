@@ -15,37 +15,39 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+    <!-- Stylesheets from OIT VA site-->
+    <link href="https://cdn.eo.va.gov/vendor/fa5/current/css/all.css" rel="stylesheet" />
+    <link href="~/css/uswds2.css" rel="stylesheet" />' 
+    <link href="~/css/va-core.css" rel="stylesheet" />
+    <link href="~/css/va-theme.css" rel="stylesheet" />
+    <!-- addition for this landing page -->
+    <link href="~/css/demo.css" rel="stylesheet" />
+    <!--Base Javascript-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-page="/Index" class="navbar-brand">DemoEdpDotNet</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
-                </ul>
-            </div>
+    <header id="topbar" class="usa-header usa-header-extended" role="banner">
+
+        <div class="usa-navbar">
+            <button class="usa-menu-btn">Menu</button>
+            <div class="usa-logo" id="logo"> <em class="usa-logo-text"><a href="/" accesskey="1" title="VA Information Technology Home" aria-label="Home">Enterprise Design Pattern<span class="va-logo">VA</span></a> </em> </div>
         </div>
-    </nav>
+        <nav role="navigation" class="usa-nav">
+            <div class="usa-nav-inner">
+
+                <ul class="usa-nav-primary usa-accordion">
+                    <li><a href="/" class="usa-nav-link"><i class="fas fa-home icon-left" aria-hidden="true"></i> Home</a></li>
+                   
+                 </ul>
+            </div>
+        </nav>/
+    </header>
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - DemoEdpDotNet</p>
-        </footer>
     </div>
 
     <environment include="Development">
@@ -58,17 +60,120 @@
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
                 crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
                 crossorigin="anonymous"
-                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
-        </script>
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)
+    
+    <footer class="usa-section usa-section-lighter va-border-top" role="contentinfo">
+            <div class="usa-grid va-margin_bottom">
+                <div class="usa-width-one-fourth va-margin_bottom-sm">
+                    <h3>VA MISSION</h3>
+                    <p>To fulfill President Lincoln&rsquo;s promise <em>&ldquo;To care for him who shall have borne the battle,
+                            and for his widow, and his orphan&rdquo;</em> by serving and honoring the men and women who are
+                        America&rsquo;s Veterans.</p>
+                    <h3>SUBSCRIBE</h3>
+                    <p>Get the latest Digital<strong>VA</strong> updates delivered to your inbox.</p>
+                    <a href="https://public.govdelivery.com/accounts/USVAOIT/subscriber/new?topic_id=USVAOIT_21" class="usa-button usa-button-red va-noradius" title="the will take you to the GovDelivery subscription form for VA and will open a new window or tab" target="_blank">SUBSCRIBE TODAY!</a>
+                </div>
+                <nav class="usa-width-one-half mobile-hide">
+                    <h3>VETERAN PROGRAMS AND SERVICES</h3>
+                    <ul class="usa-unstyled-list" style="column-count:2;column-width:200px;column-gap:2rem;">
+                        <li><a href="https://www.va.gov/" title="Department of Veterans Affairs homepage">VA.gov</a></li>
+                        <li><a href="https://www.va.gov/homeless/">For Homeless Veterans</a></li>
+                        <li><a href="https://www.va.gov/womenvet/">For Women Veterans</a></li>
+                        <li><a href="https://www.va.gov/centerforminorityveterans/">For Minority Veterans</a></li>
+                        <li><a href="https://www.ptsd.va.gov">PTSD</a></li>
+                        <li><a href="https://www.mentalhealth.va.gov/">Mental Health</a></li>
+                        <li><a href="https://www.publichealth.va.gov/">Public Health</a>
+                        </li><li><a href="https://www.accesstocare.va.gov/ourproviders/">Find a VA Healthcare Provider</a></li>
+                        <li><a href="https://www.va.gov/adaptivesports/">Adaptive Sports and Special Events</a></li>
+                        <li><a href="https://www.va.gov/vso/">Veterans Service Organizations (VSO)</a></li>
+                    </ul>
+                    <h3>ADDITIONAL VA RESOURCES</h3>
+
+                    <ul class="usa-unstyled-list" style="column-count:2;column-width:200px;column-gap:2rem;">
+                         <li><a href="https://explore.va.gov">Explore VA</a></li>
+                         <li><a href="https://www.va.gov/vaforms/">VA Forms</a></li>
+                        <li><a href="https://www.va.gov/health/">Veterans Health Administration (VHA)</a></li>
+                        <li><a href="https://benefits.va.gov/benefits/">Veterans Benefits Administration (VBA)</a></li>
+                        <li><a href="https://www.cem.va.gov/">National Cemetery Administration (NCA)</a></li>
+                        <li><a href="https://www.va.gov/jobs/">Careers at VA</a></li>
+                        <li><a href="https://www.va.gov/COMMUNITYCARE/programs/veterans/VCP/index.asp">Veterans Choice Program</a></li>
+                        <li><a href="https://www.accesstocare.va.gov/">Access to Care</a></li>
+                        <li><a href="https://www.va.gov/landing2_business.htm">Doing Business with VA</a></li>
+                        <li><a href="https://www.va.gov/opa/">Public Affairs</a></li>
+                        <li><a href="https://www.va.gov/opa/pressrel/">News Releases</a></li>
+                    </ul>
+                </nav>
+                <div class="usa-width-one-fourth">
+                    <h3>CONNECT WITH US</h3>
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="far fa-rss" aria-hidden="true"></i></span><a href="https://www.oit.va.gov/news/rss.cfm">RSS Feed</a></li>
+                        <li><span class="fa-li"><i class="fab fa-twitter twitter" aria-hidden="true"></i></span><a href="https://www.twitter.com/va_cio/">Twitter</a></li>
+                        <li><span class="fa-li"><i class="fab fa-youtube youtube_red" aria-hidden="true"></i></span><a href="https://www.youtube.com/user/DeptVetAffairsOIT/">YouTube</a></li>
+                    </ul>
+                    <h3>In Crisis? Get Help Now</h3>
+                    <a href="http://www.veteranscrisisline.net/" class="usa-button va-noradius">Veterans Crisis Line</a>
+
+                </div>
+            </div>
+    </footer>
+    <section class="usa-secion  usa-section-blue-midnight">
+        <div class="usa-grid va-colpadding_20" style="height:8rem; text-align:center   ">
+            <a href="https://www.va.gov" title="go to the VA homepage"><img src="~/images/Official_VA_Seal.png" style="margin:-3rem auto; position:relative;max-width:10rem;" alt="Official VA seal"></a>
+        </div>
+    </section>
+    <section class="usa-secion usa-section-black mobile-hide">
+        <div class="usa-grid">
+            <p class="copyright">
+                <span><a href="https://www.va.gov/oei/docs/VA2018-2024strategicPlan.pdf">VA Strategic Plan</a></span>
+                <span><a href="https://www.oprm.va.gov/privacy/">Privacy</a></span>
+                <span><a href="https://www.va.gov/web/standards/disclaimer.cfm">Disclaimers</a></span>
+                <span><a href="https://www.va.gov/oig/">Inspector General</a></span>
+                <span><a href="https://www.oprm.va.gov/foia/">FOIA</a></span>
+                <span><a href="https://www.va.gov/orm/NOFEAR_Select.asp">No FEAR Act</a></span>
+                <span><a href="https://www.va.gov/accountability">Whistleblower and Rights
+                        Protection</a></span>
+                <span><a href="https://www.va.gov/web/standards/">Website Policies</a></span>
+                <span><a href="https://www.data.va.gov">Open Data</a></span>
+
+                </p><p>
+        </p></div>
+    </section>
+
+    <script  id="_fed_an_ua_tag" language="javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?ver=true&amp;agency=VA&amp;pua=UA-80137889-1" defer></script>
+    <div id="modal-crisisline" class="va-overlay va-modal va-modal-large" role="alertdialog">
+      <div class="va-crisis-panel va-modal-inner">
+        <div class="va-overlay-body va-crisis-panel-body">
+          <h3 class="usa-serif va-modal-title">We&rsquo;re here anytime, day or night - 24/7</h3>
+          <p class="va-padding_bottom-sm">If you are a Veteran in crisis or concerned about one, connect with our caring, qualified responders for confidential help. Many of them are Veterans themselves.</p>
+          <ul>
+            <li><a href="tel:+1-800-273-8255" tabindex='0' id="va-crisis-primary"><i class="fas fa-phone icon-left" aria-hidden="true"></i>
+                Call <strong>1-800-273-8255 and press 1</strong></a></li>
+            <li><a href="sms:838255"><i class="fas fa-mobile-alt icon-left" aria-hidden="true"></i> Text to <strong>838255</strong></a></li>
+            <li><a href="https://www.veteranscrisisline.net/ChatTermsOfService.aspx?account=Veterans%20Chat"><i class="far fa-comments  icon-left"></i>Chat
+                <strong>confidentially now</strong></a></li>
+            <li><a href="tel:+1-800-799-4889"><i class="fa fa-deaf icon-left" aria-hidden="true"></i> Call TTY if you have
+                hearing loss <strong>1-800-799-4889</strong></a></li>
+
+          </ul>
+          <p>If you are in crisis or having thoughts of suicide,
+            visit <a href="https://www.veteranscrisisline.net/">VeteransCrisisLine.net</a> for more resources.</p>
+        </div>
+        <button class="va-modal-close va-overlay-close" type="button" id="va-vcl-close-btn"><span class="usa-sr-only">Close
+            this modal</span> <i class="far fa-times-circle fa-2x va-overlay-close usa-text-blue" aria-hidden="true" title="close this modal"></i>
+        </button>
+      </div>
+    </div>
+    <script src=~/js/site.js"></script>
+    <script src="~/js/udws.min.js"></script>
 </body>
 </html>
+
