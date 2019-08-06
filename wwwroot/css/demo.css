@@ -1,5 +1,8 @@
 ﻿/* add to have fixed height for cards */
 
+body { padding-top: 0px;}
+pre  { display:none; }
+
 article.usa-card {
     height: 340px;
 }
@@ -123,11 +126,12 @@ article.usa-card {
 
 
 .body-content {
-    padding-left: 15px; 
-    padding-right: 15px; 
+    padding-left: 0px; 
+    padding-right: 0px; 
 }
 
 
 footer {
     margin-top: 5rem;
 }
+
